@@ -1,4 +1,4 @@
-#lang sicp
+#lang scheme
 (require "basic.rkt")
 
 ;for 2.3

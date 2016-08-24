@@ -1,6 +1,7 @@
 #lang scheme
 ;basic
 (provide nil)
+(provide error)
 
 ;math
 (provide power)
