@@ -1,9 +1,18 @@
-#lang scheme
+#lang sicp
 (require "basic.rkt")
 
-
 ;for 2.3
-;http://autonomist.tistory.com/entry/%EA%B8%80%EC%9E%90%EC%8B%9D%EC%9D%98-%EB%AF%B8%EB%B6%84-SICP-232
+(provide variable?)
+(provide same-variable?)
+(provide sum?)
+(provide addend)
+(provide augend)
+(provide make-sum)
+(provide product?)
+(provide multiplier)
+(provide multiplicand)
+(provide make-product)
+
 
 (define (variable? x) (symbol? x))
 (define (same-variable? v1 v2)
@@ -14,8 +23,8 @@
 (define (sum? e)
   (and (pair? e) (eq? (car e) '+)))
 (define (addend e) (caddr e))
-(define (augend e) (cadr s))
-(defiine (make-sum a1 a2)
+(define (augend e) (cadr e))
+(define (make-sum a1 a2)
   (list '+ a1 a2))
 
 (define (product? e)
