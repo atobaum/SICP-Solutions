@@ -16,6 +16,17 @@
 ;basic
 (define nil null)
 
+(define (error x . y)
+  (define (iter x . y)
+    (if (not (null? x))
+        (let ()
+          (display x)
+          (newline)
+          (iter (car y) (cdr y)))
+        (newline)))
+  (display "ERROR!!!: ")
+  (iter x y))
+
 ;math
 ;calculate a^b for positive b.
 (define (power a b)
@@ -38,8 +49,8 @@
   (if (= 0 (remainder x 2))
       #f
       (iter 3 x)))
-        
-    
+
+
 
 ;custom map
 (define (cmap proc items)
